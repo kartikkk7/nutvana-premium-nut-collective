@@ -73,9 +73,7 @@ export function Nav() {
             ))}
             <button
               onClick={() => goToQuote()}
-              className={`rounded-full px-6 py-2.5 text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5 gold-grad text-forest-deep shadow-gold ${
-                scrolled ? "" : ""
-              }`}
+              className="rounded-full px-6 py-2.5 text-sm font-bold uppercase tracking-widest text-forest-deep shadow-gold transition-all duration-300 hover:-translate-y-0.5 gold-grad"
             >
               Get a Quote
             </button>

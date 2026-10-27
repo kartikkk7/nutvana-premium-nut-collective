@@ -9,13 +9,12 @@ export function IntroLoader() {
   );
 
   useEffect(() => {
-    if (phase !== "visible") return;
-    const t1 = setTimeout(() => setPhase("leaving"), 1400);
-    const t2 = setTimeout(() => setPhase("gone"), 2100);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-    };
+    if (phase === "gone") return;
+    const t = setTimeout(
+      () => setPhase(phase === "visible" ? "leaving" : "gone"),
+      phase === "visible" ? 1400 : 700,
+    );
+    return () => clearTimeout(t);
   }, [phase]);
 
   if (phase === "gone") return null;
@@ -24,7 +23,7 @@ export function IntroLoader() {
     <div
       aria-hidden="true"
       className={`fixed inset-0 z-[100] flex items-center justify-center forest-grad transition-opacity duration-700 ${
-        phase === "leaving" ? "opacity-0" : "opacity-100"
+        phase === "leaving" ? "pointer-events-none opacity-0" : "opacity-100"
       }`}
     >
       <div className="animate-logo-in flex flex-col items-center">

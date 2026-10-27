@@ -21,10 +21,10 @@ export function Testimonials() {
       aria-label="What business buyers say"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
-      onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+      onTouchStart={(e) => (touchX.current = e.touches[0]?.clientX ?? null)}
       onTouchEnd={(e) => {
         if (touchX.current === null) return;
-        const dx = e.changedTouches[0].clientX - touchX.current;
+        const dx = e.changedTouches[0]?.clientX ?? 0;
         if (Math.abs(dx) > 40) {
           setIndex((i) => (i + (dx < 0 ? 1 : -1) + TESTIMONIALS.length) % TESTIMONIALS.length);
         }

@@ -47,7 +47,7 @@ export function Spotlight() {
           {/* Steps */}
           <ol className="relative space-y-8 before:absolute before:bottom-8 before:left-6 before:top-8 before:w-px before:bg-gold/30 sm:before:left-7">
             {SPOTLIGHT_STEPS.map((step, i) => {
-              const Icon = STEP_ICONS[i];
+              const Icon = STEP_ICONS[i]!;
               return (
                 <Reveal as="li" key={step.title} delay={i * 120} className="relative flex gap-5 pl-0">
                   <span className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full gold-grad text-forest-deep shadow-gold sm:h-14 sm:w-14">
@@ -86,7 +86,7 @@ export function Spotlight() {
                   }`}
                 >
                   {(() => {
-                    const Icon = BENEFIT_ICONS[i];
+                    const Icon = BENEFIT_ICONS[i]!;
                     return <Icon className="h-4 w-4" aria-hidden="true" />;
                   })()}
                   {b.title}
@@ -97,8 +97,8 @@ export function Spotlight() {
               className="mx-auto mt-8 max-w-xl rounded-2xl bg-leaf/15 px-6 py-5 text-center text-ivory/90"
               role="tabpanel"
             >
-              <p className="font-display text-xl font-semibold text-gold-light">{SPOTLIGHT_BENEFITS[benefit].title}</p>
-              <p className="mt-2 text-sm">{SPOTLIGHT_BENEFITS[benefit].text}</p>
+              <p className="font-display text-xl font-semibold text-gold-light">{SPOTLIGHT_BENEFITS[benefit]!.title}</p>
+              <p className="mt-2 text-sm">{SPOTLIGHT_BENEFITS[benefit]!.text}</p>
             </div>
           </div>
         </Reveal>

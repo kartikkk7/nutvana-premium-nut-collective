@@ -40,7 +40,7 @@ export function Quiz() {
     { title: "I am a…", options: ROLES, value: role, set: setRole },
     { title: "I'm interested in…", options: INTERESTS, value: interest, set: setInterest },
     { title: "I need…", options: NEEDS, value: need, set: setNeed },
-  ][progress];
+  ][progress]!;
 
   return (
     <section id="quiz" className="scroll-mt-24 bg-ivory pb-20 sm:pb-28" aria-label="Find your Nutvana">
@@ -106,7 +106,7 @@ export function Quiz() {
                   <GoldButton
                     onClick={() =>
                       goToQuote({
-                        products: INTEREST_PRODUCTS[interest ?? "Both"],
+                        products: INTEREST_PRODUCTS[interest ?? "Both"] ?? [],
                         message: `Hi Nutvana, I'm a ${role} interested in ${interest}. I need ${need}. Please share a quote and free sample details.`,
                       })
                     }
