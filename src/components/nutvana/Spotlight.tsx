@@ -86,7 +86,7 @@ export function Spotlight() {
                   }`}
                 >
                   {(() => {
-                    const Icon = BENEFIT_ICONS[i];
+                    const Icon = BENEFIT_ICONS[i]!;
                     return <Icon className="h-4 w-4" aria-hidden="true" />;
                   })()}
                   {b.title}
