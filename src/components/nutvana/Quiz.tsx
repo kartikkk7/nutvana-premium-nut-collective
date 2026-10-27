@@ -106,7 +106,7 @@ export function Quiz() {
                   <GoldButton
                     onClick={() =>
                       goToQuote({
-                        products: INTEREST_PRODUCTS[interest ?? "Both"],
+                        products: INTEREST_PRODUCTS[interest ?? "Both"] ?? [],
                         message: `Hi Nutvana, I'm a ${role} interested in ${interest}. I need ${need}. Please share a quote and free sample details.`,
                       })
                     }

@@ -97,8 +97,8 @@ export function Spotlight() {
               className="mx-auto mt-8 max-w-xl rounded-2xl bg-leaf/15 px-6 py-5 text-center text-ivory/90"
               role="tabpanel"
             >
-              <p className="font-display text-xl font-semibold text-gold-light">{SPOTLIGHT_BENEFITS[benefit].title}</p>
-              <p className="mt-2 text-sm">{SPOTLIGHT_BENEFITS[benefit].text}</p>
+              <p className="font-display text-xl font-semibold text-gold-light">{SPOTLIGHT_BENEFITS[benefit]!.title}</p>
+              <p className="mt-2 text-sm">{SPOTLIGHT_BENEFITS[benefit]!.text}</p>
             </div>
           </div>
         </Reveal>
