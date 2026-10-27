@@ -11,10 +11,9 @@ export function Floaters() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Nutvana on WhatsApp"
-        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-white shadow-luxe transition-transform duration-300 hover:scale-110 md:flex"
+        className="fixed bottom-6 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-ivory shadow-luxe transition-transform duration-300 hover:scale-110 md:flex"
       >
         <MessageCircle className="h-7 w-7" aria-hidden="true" />
-        <span className="absolute inset-0 rounded-full bg-whatsapp/50 animate-ping" aria-hidden="true" style={{ animationDuration: "2.5s" }} />
       </a>
 
       {/* Mobile sticky quote bar */}
