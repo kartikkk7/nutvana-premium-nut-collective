@@ -95,10 +95,10 @@ export function Packaging() {
           >
             <div
               className="overflow-hidden rounded-3xl shadow-luxe"
-              onTouchStart={(e) => (startX.current = e.touches[0].clientX)}
+              onTouchStart={(e) => (startX.current = e.touches[0]?.clientX ?? null)}
               onTouchEnd={(e) => {
                 if (startX.current === null) return;
-                const dx = e.changedTouches[0].clientX - startX.current;
+                const dx = e.changedTouches[0]?.clientX ?? 0;
                 if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
                 startX.current = null;
               }}
