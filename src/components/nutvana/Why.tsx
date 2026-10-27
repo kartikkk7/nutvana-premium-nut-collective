@@ -23,7 +23,7 @@ export function Why() {
 
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {WHY_CARDS.map((card, i) => {
-            const Icon = ICONS[i];
+            const Icon = ICONS[i]!;
             return (
               <Reveal key={card.title} delay={(i % 3) * 100}>
                 <div className="group h-full rounded-3xl border border-gold/20 bg-card p-8 shadow-luxe transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/60 hover:shadow-gold">
